@@ -1,0 +1,8 @@
+# This expresses a position and orientation on a 2D manifold.
+# This x's and y's scale is mm
+
+float64 x
+float64 y
+string motion
+---
+int8 result

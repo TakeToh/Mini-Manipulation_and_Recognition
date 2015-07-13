@@ -1,0 +1,846 @@
+[0m[ INFO] [1436668077.165801113]: MANIP_AND_RECOGNITION   S T A R T[0m
+[0m[ INFO] [1436668079.937957672]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.271222 y: 0.91271 z: -0.0718538 theta: 1.53737
+Previous Positon   x: 0 y: 0 z: 0 theta: 0
+[0m[ INFO] [1436668080.440837358]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.271339 y: 0.912679 z: -0.0718286 theta: 1.53744
+Previous Positon   x: 0.271222 y: 0.91271 z: -0.0718538 theta: 1.53737
+[0m[ INFO] [1436668080.803807751]: Action finished: SUCCEEDED[0m
+[0m[ INFO] [1436668080.803864024]: THROW EXCEPTION ERROR[0m
+[0m[ INFO] [1436668080.803990927]: This program access Adrress0x0.[0m
+[0m[ INFO] [1436668080.804028768]: PHASE_No.0 is DANGER
+[0m
+[0m[ INFO] [1436668081.189189366]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.272946 y: 0.917691 z: -0.0796971 theta: 2.34335
+Previous Positon   x: 0.271339 y: 0.912679 z: -0.0718286 theta: 1.53744
+[0m[ INFO] [1436668081.698508656]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.274419 y: 0.907461 z: -0.0716186 theta: 2.82863
+Previous Positon   x: 0.272946 y: 0.917691 z: -0.0796971 theta: 2.34335
+[0m[ INFO] [1436668082.116296863]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.272398 y: 0.915668 z: -0.0795153 theta: 2.34361
+Previous Positon   x: 0.274419 y: 0.907461 z: -0.0716186 theta: 2.82863
+[0m[ INFO] [1436668082.580634865]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.271221 y: 0.913714 z: -0.0718284 theta: 1.942
+Previous Positon   x: 0.272398 y: 0.915668 z: -0.0795153 theta: 2.34361
+[0m[ INFO] [1436668083.053110912]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.272387 y: 0.915672 z: -0.0795103 theta: 2.34356
+Previous Positon   x: 0.271221 y: 0.913714 z: -0.0718284 theta: 1.942
+[0m[ INFO] [1436668083.410947688]: Action finished: SUCCEEDED[0m
+[0m[ INFO] [1436668083.411002337]: THROW EXCEPTION ERROR[0m
+[0m[ INFO] [1436668083.411054654]: This program access Adrress0x0.[0m
+[0m[ INFO] [1436668083.411086023]: PHASE_No.0 is DANGER
+[0m
+[0m[ INFO] [1436668083.897208629]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.271242 y: 0.912704 z: -0.0718678 theta: 1.53711
+Previous Positon   x: 0.272387 y: 0.915672 z: -0.0795103 theta: 2.34356
+[0m[ INFO] [1436668084.318107542]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.275082 y: 0.909448 z: -0.071784 theta: 2.82889
+Previous Positon   x: 0.271242 y: 0.912704 z: -0.0718678 theta: 1.53711
+[0m[ INFO] [1436668084.716272577]: Action finished: SUCCEEDED[0m
+[0m[ INFO] [1436668084.716334455]: THROW EXCEPTION ERROR[0m
+[0m[ INFO] [1436668084.716391704]: This program access Adrress0x0.[0m
+[0m[ INFO] [1436668085.330085347]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Previous Positon   x: 0.275082 y: 0.909448 z: -0.071784 theta: 2.82889
+[0m[ INFO] [1436668085.798126213]: Action finished: SUCCEEDED[0m
+Object[0] is inputed
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+ROBOT POSITION
+Current Positon   x: -0.0241567 y: 0.00220659 z: 0 theta: -0.231431
+Previous Positon   x: -0.0241567 y: 0.00220659 z: 0 theta: -0.231431
+Angle Aim = -0.289172
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+Object Data
+Current Positon   x: 0.273017 y: 0.917667 z: -0.0796857 theta: 2.34376
+Previous Positon   x: 0.271254 y: 0.912705 z: -0.0718402 theta: 1.53699
+... logging to /home/toppo/.ros/log/7824c038-283d-11e5-b3f7-74e50ba0e99c/roslaunch-toppo-PC-VK17HHTNX-17644.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/toppo/catkin_ws/src/manip_and_recog/launch/manip_and_recog.launch
+[1mstarted roslaunch server http://toppo-PC-VK17HHTNX:46005/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.13
+
+NODES
+  /
+    manip_and_recog (manip_and_recog/manip_and_recog)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/toppo/catkin_ws/src/manip_and_recog/launch/manip_and_recog.launch http://localhost:11311
+core service [/rosout] found
+[1mprocess[manip_and_recog-1]: started with pid [17662][0m
+[manip_and_recog-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

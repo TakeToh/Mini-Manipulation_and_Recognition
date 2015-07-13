@@ -1,0 +1,10 @@
+# Optional ROI to use for the object detection
+# Define the goal
+bool use_roi
+float32[] filter_limits
+---
+# Send the found objects, see the msg files for docs
+# define the result 
+object_recognition_msgs/RecognizedObjectArray recognized_objects
+---
+#no feedback
