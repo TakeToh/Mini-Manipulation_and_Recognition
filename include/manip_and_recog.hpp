@@ -2,7 +2,6 @@
 #define __MANIP_AND_RECOG__
 
 #include "ros/ros.h"
-
 // Include Actionlib
 #include <actionlib/client/simple_action_client.h>
 #include <actionlib/client/simple_client_goal_state.h>
@@ -96,8 +95,7 @@ private:
 	ros::NodeHandle node;
 	ros::Subscriber odom_sub;		// Getting KOBUKI odometry
 	ros::Publisher vel_pub;		//Sending velocity to KOBUK
-	ros::ServiceClient ArmPointclient;		//In order to execute Servo motor
-	ros::ServiceClient Headclient;
+	ros::ServiceClient Armclient;		//In order to execute Servo motor
 	ros::Subscriber OutputPub;
 	
 	//Action library for object recognition kitchen
@@ -130,9 +128,11 @@ public:
 	double GetTheta(void);
 
 	//	P H A S E____F U N C T I O N
-	ROBO_CONDITION AimToObject(void);
-	ROBO_CONDITION GetDataObject(void);
-	ROBO_CONDITION CatchObject(void);
+	ROBO_CONDITION GetDataObject(void);				//STAGE BUGIN
+	ROBO_CONDITION AimToObject();					//STAGE 1st
+	ROBO_CONDITION OptimizeHand(void);				//STAGE 2nd
+	ROBO_CONDITION MoveToObject(void);				//STAGE 3rd
+
 };
 
 #endif

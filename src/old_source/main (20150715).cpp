@@ -41,23 +41,26 @@ void Robot::init()
 	ac->waitForServer();
 
 	//In order to execute Servo motor
-	Armclient = node.serviceClient< manip_and_recog::ArmPose >("arm_pose");
+	ArmPointclient = node.serviceClient< manip_and_recog::ArmPose >("arm_pose");
+	Headclient = node.serviceClient< manip_and_recog::Servo >("arm_move");
 	OutputPub = node.subscribe("/recognizer/output",100,&Robot::CallBackOutput,this);		
 	
 }
 
 void Robot::HeadUp()
 {
-	manip_and_recog::ArmPose HeadSrv;
-	HeadSrv.request.x=1010;
-	HeadSrv.request.y=1010;
-	HeadSrv.request.motion="head";
-	if(Armclient.call(HeadSrv)){
+	manip_and_recog::Servo HeadSrv;
+	HeadSrv.request.num=1;
+	HeadSrv.request.angle=0;
+	HeadSrv.request.motion="catch";
+	if(Headclient.call(HeadSrv)){
 		ROS_INFO("______HEAD_POSITON_STATISC___");
 	}else{
 		ROS_INFO("HEAD_POSITON_FAULT");
 	}
 	ROS_INFO("ROBOT INIT FINISHED");
+
+	Headclient.shutdown();
 }
 
 PHASE_STATE Robot::getState()
@@ -369,95 +372,14 @@ ROBO_CONDITION Robot::AimToObject()
 	}
 }
 
-
 ///////////////////////////////////////////////////////////////////
-///			P H A S E 2		"" Optimize Hand Position ""
-///			1st		Calcurate distance from Diff Object position to Kobuki position
-///			2nd		In order to be arms height equal to object height, calcurate y,x coodinates.
-///////////////////////////////////////////////////////////////////
-ROBO_CONDITION Robot::OptimizeHand(void)
-{
-	ROS_INFO(" JUST TEST STAGE");
-
-	// preventer 
-	static int loop=0;
-	static bool CatchPoint=false;
-
-	// Debug Object
-	int i=0;
-
-	const double ArmLength= 350;
-
-	//		1st
-	POSE ob_pose;							
-	ob_pose = object[i].GetPosition();		//object data
-	
-	//calcurate distance from Object to Kobuki position	
-	//double diff_y = ob_pose.y-pose.x;				// Distance 
-	double diff_y = sqrt(ArmLength*ArmLength - ob_pose.z*ob_pose.z);
-	double diff_z = ob_pose.z+300;						// Height
-	
-/*
-	double ob_dis =0;
-	
-	std::cout << "____________OBJECT____DISTANCE____________" << std::endl;
-	std::cout << "y_distance: " << diff_y << " z_distance: " << diff_z << std::endl;
-	std::cout << "ob_dis =" << ob_dis << std::endl;
-	loop++;
-*/
-	//		2nd
-/*
-	if(loop>20 && !CatchPoint){
-		return DANGER;
-	}
-*/
-
-	manip_and_recog::ArmPose srvHand;
-	manip_and_recog::ArmPose srv;
-/*
-	if(ob_dis < 400){
-		Move(-0.3,0,0);
-	}else if(ob_dis > 630){
-		Move(0.3,0,0);
-	}else{
-*/
-	ROS_INFO(" ROBOT REACHED CATCHING POINT");
-	//		3rd
-	Stop();	
-
-	srvHand.request.x = 000.00;
-	srvHand.request.y = 000.00;
-	srvHand.request.motion = "open";
-
-	if(Armclient.call(srvHand)){
-		ROS_INFO("______HAND_OPENED______");
-	}else{
-		ROS_INFO(" HAND OPENED FALSE");
-		return DANGER;
-	}
-
-	//		4th
-	srv.request.x = diff_y;
-	srv.request.y = diff_z;
-	srv.request.motion = "catch";
-	ROS_INFO("Send Position Data");
-
-	if(Armclient.call(srv)){
-		ROS_INFO(" Move SUCCESS");
-		state = STAGE3;
-		return SAFE;
-	}else{
-		ROS_INFO(" Move FALSE");
-		return DANGER;
-	}
-//	}
-}
-///////////////////////////////////////////////////////////////////
-///			P H A S E 3		"" Move to catching point ""
+///			P H A S E 2		"" C A T C H  O B J E C T ""
 ///			1st		Calcurate distance from Diff Object position to Kobuki position
 ///			2nd		if this distance is far -> KOBUKI move to Object
+///			3rd 	after getting at catching point, hand open
+///			4th		moving arm from start position to aimed position
 ///////////////////////////////////////////////////////////////////
-ROBO_CONDITION Robot::MoveToObject(void)
+ROBO_CONDITION Robot::CatchObject(void)
 {
 	ROS_INFO(" JUST TEST STAGE2");
 
@@ -506,7 +428,7 @@ ROBO_CONDITION Robot::MoveToObject(void)
 		srvHand.request.y = 000.00;
 		srvHand.request.motion = "open";
 
-		if(Armclient.call(srvHand)){
+		if(ArmPointclient.call(srvHand)){
 			ROS_INFO("______HAND_OPENED______");
 		}else{
 			ROS_INFO(" HAND OPENED FALSE");
@@ -519,9 +441,9 @@ ROBO_CONDITION Robot::MoveToObject(void)
 		srv.request.motion = "catch";
 		ROS_INFO("Send Position Data");
 
-		if(Armclient.call(srv)){
+		if(ArmPointclient.call(srv)){
 			ROS_INFO(" Move SUCCESS");
-			state = STAGE4;
+			state = STAGE3;
 			return SAFE;
 		}else{
 			ROS_INFO(" Move FALSE");
@@ -529,7 +451,6 @@ ROBO_CONDITION Robot::MoveToObject(void)
 		}
 	}
 }
-
 
 ///////////////////////////////////////////////////////////////////
 int main (int argc, char **argv)
@@ -553,18 +474,15 @@ int main (int argc, char **argv)
 	
 	robot.HeadUp();
 
-	while(ros::ok()){
-		if(CallMini){
-			ROS_INFO(" Called Mini");
-		
+	if(CallMini){
+		while(ros::ok()){
 
 			switch( robot.getState() ){
 				std::cout<<robot.getState()<<std::endl;
 		    	case STAGE_BEGIN:	result=robot.GetDataObject();		break;
-		    	case STAGE1:		result=robot.AimToObject();			break;	
-		    	case STAGE2:		result=robot.OptimizeHand();		break;
-		    	case STAGE3:		result=robot.MoveToObject();		break;
-		    	
+		    	case STAGE1:		result=robot.AimToObject();		break;
+		    	case STAGE2:		result=robot.CatchObject();		break;
+
 		    	case STAGE_END:		ROS_INFO("STATE_END");			break;
 		    }
 
@@ -592,13 +510,14 @@ int main (int argc, char **argv)
 		    		STAGE_NUMBER = STAGE_END;
 		    	}
 		    }
-	    }else{
-	    	ROS_INFO(" Please say Mini");
-	    }
-	    loop_rate.sleep();
-		ros::spinOnce();
+		    
+		    loop_rate.sleep();
+			ros::spinOnce();
+		}
+	}else{
+		loop_rate.sleep(); 
+		ros::spin();
 	}
-	
     ROS_INFO("FINISHED");
 
 	return 0;
