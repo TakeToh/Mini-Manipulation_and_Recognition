@@ -1,10 +1,15 @@
 #!/bin/bash
 #echo "Manipulation AND Onbject Recognition"
 
+killall roscore
+killall rosmaster
+
+source ~/.bashrc
+
 echo "Execute ROSCORE" 
 xterm -e "roscore;	exec bash" &
 
-sleep 8s
+sleep 5s
 
 echo "execute openni2_launch" 
 xterm -e "roslaunch openni2_launch openni2.launch;	exec bash" &
@@ -31,7 +36,13 @@ xterm -e "rosrun object_recognition_ros server -c `rospack find object_recogniti
 
 sleep 5s
 
+echo "Pocket Sphinks"
+xterm -e "roslaunch manip_and_recog sphinks.launch;	exec bash" 
+
+sleep 5s
+
 echo "Main program" 
+#xterm -e "roslaunch manip_and_recog manip_and_recog.launch >> log.txt;	exec bash" 
 xterm -e "roslaunch manip_and_recog manip_and_recog.launch;	exec bash" 
 
 wait

@@ -1,0 +1,20 @@
+pause speech
+continue speech
+MINI
+go forward
+go backward
+go back
+go left
+go right
+go straight
+come forward
+come backward
+come left
+come right
+turn left
+turn right
+rotate left
+rotate right
+faster
+stop
+cancel

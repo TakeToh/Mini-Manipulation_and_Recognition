@@ -18,6 +18,18 @@ PHASE_STATE TEST_MAX = STAGE3;			//if TEST_MAX's num finished, TEST_MAX=STATE_EN
 ///					C L A S S ""R O B O T "" initilization 
 ///////////////////////////////////////////////////////////////////
 
+bool CallMini = false;
+
+void Robot::CallBackOutput(const std_msgs::String& voice)
+{
+	std_msgs::String voice_command = voice;
+	std::cout << "getting data=" << voice << std::endl;
+
+   if(voice_command.data == "MINI"){
+		CallMini = true;
+	}
+}
+
 void Robot::init()
 {
 	odom_sub = node.subscribe("odom",100,&Robot::odomCallback,this);		// Getting KOBUKI odometry
@@ -30,19 +42,25 @@ void Robot::init()
 
 	//In order to execute Servo motor
 	ArmPointclient = node.serviceClient< manip_and_recog::ArmPose >("arm_pose");
+	Headclient = node.serviceClient< manip_and_recog::Servo >("arm_move");
+	OutputPub = node.subscribe("/recognizer/output",100,&Robot::CallBackOutput,this);		
+	
+}
 
-	Headclient = node.serviceClient< manip_and_recog::Servo >("head_pose");
+void Robot::HeadUp()
+{
 	manip_and_recog::Servo HeadSrv;
 	HeadSrv.request.num=1;
 	HeadSrv.request.angle=0;
 	HeadSrv.request.motion="catch";
-
 	if(Headclient.call(HeadSrv)){
 		ROS_INFO("______HEAD_POSITON_STATISC___");
 	}else{
 		ROS_INFO("HEAD_POSITON_FAULT");
 	}
 	ROS_INFO("ROBOT INIT FINISHED");
+
+	Headclient.shutdown();
 }
 
 PHASE_STATE Robot::getState()
@@ -66,8 +84,8 @@ void Robot::odomCallback(const nav_msgs::Odometry::ConstPtr &odom)
 	ex_theta = theta;
 	ex_distance = distance;
 
-   	pose.x = odom->pose.pose.position.x;
-    pose.y = odom->pose.pose.position.y;
+   	pose.x = odom->pose.pose.position.x*1000;		//
+    pose.y = odom->pose.pose.position.y*1000;
     pose.z = 0;
 
     geometry_msgs::Quaternion quat;
@@ -79,6 +97,14 @@ void Robot::odomCallback(const nav_msgs::Odometry::ConstPtr &odom)
     theta = tf::getYaw(quat);
 
     distance = sqrt(pose.x*pose.x+pose.y*pose.y);
+
+#ifdef DEBUG
+    std::cout << "_________KOBUKI_POSITION_________" << std::endl;
+    std::cout << "pose.x: " << pose.x ;
+    std::cout << "pose.y: " << pose.y ;
+    std::cout << "theta : " << theta ;
+    std::cout << "pose.z: " << pose.z << std::endl; 
+#endif
 }
 
 void Robot::SpeakPosition()
@@ -170,9 +196,9 @@ void Object::SetPosition(object_recognition_msgs::RecognizedObject ob)
 	static int loop =0;
 	static POSE MeansPose;
 			
-	pose.x = ob.pose.pose.pose.position.x;
-	pose.y = ob.pose.pose.pose.position.z;
-	pose.z = -1*ob.pose.pose.pose.position.y;
+	pose.x = ob.pose.pose.pose.position.x*1000;
+	pose.y = ob.pose.pose.pose.position.z*1000;
+	pose.z = -1*ob.pose.pose.pose.position.y*1000;
 
 	// 10 times data addeed
 	MeansPose.x +=pose.x;
@@ -331,17 +357,17 @@ ROBO_CONDITION Robot::AimToObject()
 
 	std::cout << "Angle Aim = " << AngleAim << std::endl;
 
-	if(-0.2<AngleAim+theta && AngleAim+theta < 0.2){
+	if(-0.15<AngleAim-theta && AngleAim-theta < 0.15){
 		Stop();
 		state = STAGE2;
 		return SAFE;
-	}else if(AngleAim-theta  > 0.1){
+	}else if(AngleAim-theta  > 0.15){
 		std::cout <<"positive diff= " <<AngleAim-theta<<std::endl;
-		Move(0,0,0.35);
+		Move(0,0,0.45);
 		return MISS;
-	}else if(AngleAim-theta  < -0.1){
+	}else if(AngleAim-theta  < -0.15){
 		std::cout <<"negative diff= " <<AngleAim-theta<<std::endl;
-		Move(0,0,-0.35);
+		Move(0,0,-0.45);
 		return MISS;
 	}
 }
@@ -367,9 +393,6 @@ ROBO_CONDITION Robot::CatchObject(void)
 	//		1st
 	POSE ob_pose;							
 	ob_pose = object[i].GetPosition();		//object data
-
-	ob_pose.y =ob_pose.y*1000;				// object data's demention change m to mm
-	ob_pose.z =ob_pose.z*1000;
 		
 	double diff_y = ob_pose.y-pose.x;		//calcurate distance from Object to Kobuki position
 	double diff_z = ob_pose.z;
@@ -383,23 +406,26 @@ ROBO_CONDITION Robot::CatchObject(void)
 	loop++;
 
 	//		2nd
+/*
 	if(loop>20 && !CatchPoint){
 		return DANGER;
 	}
+*/
 
-	if(ob_dis < 350){
+	manip_and_recog::ArmPose srvHand;
+	manip_and_recog::ArmPose srv;
+
+	if(ob_dis < 400){
 		Move(-0.3,0,0);
-	}else if(ob_dis > 530){
+	}else if(ob_dis > 630){
 		Move(0.3,0,0);
 	}else{
-
+		ROS_INFO(" ROBOT REACHED CATCHING POINT");
 		//		3rd
-		CatchPoint=true;
 		Stop();	
 
-		manip_and_recog::ArmPose srvHand;
-		srvHand.request.x = 00000;
-		srvHand.request.y = 00000;
+		srvHand.request.x = 000.00;
+		srvHand.request.y = 000.00;
 		srvHand.request.motion = "open";
 
 		if(ArmPointclient.call(srvHand)){
@@ -410,7 +436,6 @@ ROBO_CONDITION Robot::CatchObject(void)
 		}
 
 		//		4th
-		manip_and_recog::ArmPose srv;
 		srv.request.x = diff_y;
 		srv.request.y = diff_z;
 		srv.request.motion = "catch";
@@ -425,7 +450,6 @@ ROBO_CONDITION Robot::CatchObject(void)
 			return DANGER;
 		}
 	}
-
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -437,54 +461,62 @@ int main (int argc, char **argv)
 	Robot robot;
 	
 	robot.init();
+	
 
-	ros::Rate loop_rate(20);   
+	ros::Rate loop_rate(40);   
 		
 	int loop;
 
 	PHASE_STATE STAGE_NUMBER=STAGE_BEGIN;				//		PHASE NUMBER
-	robot.setState( STAGE_NUMBER );
+	robot.setState( STAGE_BEGIN );
 
 	ROBO_CONDITION result;				
+	
+	robot.HeadUp();
 
+	if(CallMini){
+		while(ros::ok()){
 
-	while(ros::ok()){
-		switch( robot.getState() ){
-			std::cout<<robot.getState()<<std::endl;
-	    	case STAGE_BEGIN:	result=robot.GetDataObject();		break;
-	    	case STAGE1:		result=robot.AimToObject();		break;
-	    	case STAGE2:		result=robot.CatchObject();
+			switch( robot.getState() ){
+				std::cout<<robot.getState()<<std::endl;
+		    	case STAGE_BEGIN:	result=robot.GetDataObject();		break;
+		    	case STAGE1:		result=robot.AimToObject();		break;
+		    	case STAGE2:		result=robot.CatchObject();		break;
 
-	    	case STAGE_END:		ROS_INFO("STATE_END");			break;
-	    }
+		    	case STAGE_END:		ROS_INFO("STATE_END");			break;
+		    }
 
-	    // LOOP num is upper 10 -> sleep
-	    if(loop==10){
-	    	loop_rate.sleep();
-    		ros::spinOnce();
-    		loop=0;
-    		continue;
-	    }
+		    // LOOP num is upper 10 -> sleep
+		    if(loop==10){
+		    	loop_rate.sleep();
+	    		ros::spinOnce();
+	    		loop=0;
+	    		continue;
+		    }
 
-	    if(result==DANGER){
-	    	ROS_INFO("PHASE_No.%d is DANGER\n",robot.getState());
+		    if(result==DANGER){
+		    	loop++;
+		    	ROS_INFO("PHASE_No.%d is DANGER\n",robot.getState());
 
-	    }else{
-	    	//if(robot.getState() == STAGE_BEGIN){
-			for(int i=0; i<ObjectsNum && i < 10 ; i++){
-				object[i].SpeakPosition();
-	    	}
-	    	//}
-		  
-		    //debug STAGE_LIMITER
-		    if( robot.getState() == TEST_MAX){
-	    		STAGE_NUMBER = STAGE_END;
-	    	}
-	    }
-	    
-	    loop++;
-	    loop_rate.sleep();
-		ros::spinOnce();
+		    }else{
+		    	//if(robot.getState() == STAGE_BEGIN){
+				for(int i=0; i<ObjectsNum && i < 10 ; i++){
+					object[i].SpeakPosition();
+		    	}
+		    	//}
+			  
+			    //debug STAGE_LIMITER
+			    if( robot.getState() == TEST_MAX){
+		    		STAGE_NUMBER = STAGE_END;
+		    	}
+		    }
+		    
+		    loop_rate.sleep();
+			ros::spinOnce();
+		}
+	}else{
+		loop_rate.sleep(); 
+		ros::spin();
 	}
     ROS_INFO("FINISHED");
 

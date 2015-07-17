@@ -27,6 +27,7 @@
 #include <geometry_msgs/Quaternion.h>
 #include <tf/transform_datatypes.h>
 #include <math.h>
+#include <std_msgs/String.h>
 
 // To Move ARM
 #include <manip_and_recog/ArmPose.h>
@@ -97,6 +98,7 @@ private:
 	ros::Publisher vel_pub;		//Sending velocity to KOBUK
 	ros::ServiceClient ArmPointclient;		//In order to execute Servo motor
 	ros::ServiceClient Headclient;
+	ros::Subscriber OutputPub;
 	
 	//Action library for object recognition kitchen
 	actionlib::SimpleActionClient<object_recognition_msgs::ObjectRecognitionAction> *ac;
@@ -114,8 +116,10 @@ private:
 
 public:
 	void init();
+	void HeadUp();
 	void GetActionlibResult(const object_recognition_msgs::RecognizedObjectArray& r);
 	object_recognition_msgs::RecognizedObjectArray ReturnActionResult(void);
+	void CallBackOutput(const std_msgs::String& voice);
 	void Move(double _vx, double _vy,double _vtheta);
 	void Stop();
 	void odomCallback(const nav_msgs::Odometry::ConstPtr &odom);
