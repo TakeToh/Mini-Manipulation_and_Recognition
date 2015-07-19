@@ -36,10 +36,10 @@ xterm -e "rosrun object_recognition_ros server -c `rospack find object_recogniti
 
 sleep 5s
 
-echo "Pocket Sphinks"&
-xterm -e "roslaunch manip_and_recog sphinks.launch;	exec bash" &
+#echo "Pocket Sphinks"&
+#xterm -e "roslaunch manip_and_recog sphinks.launch;	exec bash" &
 
-sleep 5s
+#sleep 5s
 
 echo "Main program" &
 #xterm -e "roslaunch manip_and_recog manip_and_recog.launch >> log.txt;	exec bash" 

@@ -1,0 +1,5 @@
+#FLAG
+bool flag
+---
+#Using PCL Multi object centroid
+geometry_msgs/PoseArray object_pose

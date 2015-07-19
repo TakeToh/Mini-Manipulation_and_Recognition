@@ -74,6 +74,7 @@ add_service_files(
   FILES
   ArmPose.srv
   Servo.srv
+  ObjectPoints.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -86,6 +87,7 @@ add_service_files(
 generate_messages(
    DEPENDENCIES
    std_msgs
+   geometry_msgs
 )
 
 ###################################

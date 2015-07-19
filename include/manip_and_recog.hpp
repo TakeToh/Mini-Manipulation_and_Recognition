@@ -34,6 +34,11 @@
 
 // DEBUG OPTION
 #define DEBUG
+//#define FULL
+
+#include <geometry_msgs/PoseArray.h>
+
+#include <robocup_perception/ObjectPoints.h>
 
 // _____________MACRO_____________
 
@@ -52,7 +57,9 @@ enum PHASE_STATE
 	STAGE3 = 3,
 	STAGE4 = 4,
 	STAGE_END = 99,
-	STAGE_TEST = 100
+	STAGE_TEST = 100,
+	STAGE_EXTRA= 200,
+	STAGE_EXTRA2= 300
 };
 
 enum ROBO_CONDITION
@@ -95,8 +102,12 @@ private:
 	ros::NodeHandle node;
 	ros::Subscriber odom_sub;		// Getting KOBUKI odometry
 	ros::Publisher vel_pub;		//Sending velocity to KOBUK
+
 	ros::ServiceClient Armclient;		//In order to execute Servo motor
 	ros::Subscriber OutputPub;
+	ros::Publisher ObjectDataPub;		// By Mr.Nishikawa's detection data 
+	ros::Subscriber ObjectCoodi_pub ;
+	ros::ServiceClient ObjectCoodi_client;
 	
 	//Action library for object recognition kitchen
 	actionlib::SimpleActionClient<object_recognition_msgs::ObjectRecognitionAction> *ac;
@@ -112,6 +123,8 @@ private:
 	double distance;
 	double ex_distance;
 
+	geometry_msgs::Pose TargetObject;			//PCL data
+
 public:
 	void init();
 	void HeadUp();
@@ -125,14 +138,22 @@ public:
 	void setState( PHASE_STATE ps);
 	void SpeakPosition();
 	geometry_msgs::Point GetPosition();
-	double GetTheta(void);
+	double GetTheta();
+	void ObjectDataCallback();
+
+
+	void timerCallback1(const ros::TimerEvent& event);
+	void timerCallback2(const ros::TimerEvent& event);
+	void CatchPointCallback(const geometry_msgs::PoseArray pa);
 
 	//	P H A S E____F U N C T I O N
 	ROBO_CONDITION GetDataObject(void);				//STAGE BUGIN
 	ROBO_CONDITION AimToObject();					//STAGE 1st
 	ROBO_CONDITION OptimizeHand(void);				//STAGE 2nd
 	ROBO_CONDITION MoveToObject(void);				//STAGE 3rd
-
+	ROBO_CONDITION ScanMode(void);					//STAGE_EXTRA
+	ROBO_CONDITION AimToObjectConcentraitPub(void);	//STAGE_EXTRA2
+	ROBO_CONDITION AimToObjectConcentraitCli(void);
 };
 
 #endif

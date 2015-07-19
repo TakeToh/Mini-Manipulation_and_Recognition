@@ -1,7 +1,7 @@
 <launch>
 	<!-- 	Execute program package -->
-	<node pkg="arm_move_pkg" name="arm_move_service" type="arm_move_service.py" output="screen"/>
-	<node pkg="arm_move_pkg" name="arm_move_tf" type="arm_move_tf.py" output="screen"/>
+	<!--<node pkg="arm_move_pkg" name="arm_move_service" type="arm_move_service.py" output="screen"/>-->
+	<!--<node pkg="arm_move_pkg" name="arm_move_tf" type="arm_move_tf.py" output="screen"/>-->
 
 	<node pkg="manip_and_recog" name="manip_and_recog" type="manip_and_recog" output="screen">
 		<!--	Set Remap				-->

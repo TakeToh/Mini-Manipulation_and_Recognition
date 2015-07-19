@@ -23,7 +23,7 @@ bool CallMini = false;
 void Robot::CallBackOutput(const std_msgs::String& voice)
 {
 	std_msgs::String voice_command = voice;
-	std::cout << "getting data=" << voice_command.data << std::endl;
+	std::cout << "getting data=" << voice << std::endl;
 
    if(voice_command.data == "MINI"){
 		CallMini = true;
@@ -37,17 +37,13 @@ void Robot::init()
 
 	//Using actionlib in order to execute simple action server's client
 	//trueのところをfalseに変えると実行されないことがわかった
-//	ac = new actionlib::SimpleActionClient<object_recognition_msgs::ObjectRecognitionAction>("recognize_objects", true);
-//	ac->waitForServer();
+	ac = new actionlib::SimpleActionClient<object_recognition_msgs::ObjectRecognitionAction>("recognize_objects", true);
+	ac->waitForServer();
 
 	//In order to execute Servo motor
-//	Armclient = node.serviceClient< manip_and_recog::ArmPose >("arm_pose");
-//	OutputPub = node.subscribe("/recognizer/output",100,&Robot::CallBackOutput,this);	
-
-//	ObjectCoodi_pub = node.subscribe("catchpoint",100,&Robot::CatchPointCallback,this);
-	ObjectCoodi_client = node.serviceClient< robocup_perception::ObjectPoints>("pcl_call");
-	////////////////////
-	//ObjectDataPub = node.subscribe("    ",100,&Robot::ObjectDataCallback,this);	
+	Armclient = node.serviceClient< manip_and_recog::ArmPose >("arm_pose");
+	OutputPub = node.subscribe("/recognizer/output",100,&Robot::CallBackOutput,this);		
+	
 }
 
 void Robot::HeadUp()
@@ -104,8 +100,7 @@ void Robot::odomCallback(const nav_msgs::Odometry::ConstPtr &odom)
     std::cout << "pose.x: " << pose.x ;
     std::cout << "pose.y: " << pose.y ;
     std::cout << "theta : " << theta ;
-    std::cout << "pose.z: " << pose.z; 
-    std::cout << "distance " << distance << std::endl;
+    std::cout << "pose.z: " << pose.z << std::endl; 
 #endif
 }
 
@@ -535,159 +530,6 @@ ROBO_CONDITION Robot::MoveToObject(void)
 	}
 }
 
-///////////////////////////////////////////////////////////////////
-////
-////	E X T R A  " K O B U K I  S C A N"
-////	1st 	a little meter go ahead
-////	2nd		Turn right and left at angle 45
-////	3rd 	diff angle 
-////
-///////////////////////////////////////////////////////////////////
-bool FlagTimer1=false;
-bool FlagFinish1 = false;
-
-void Robot::timerCallback1(const ros::TimerEvent& event)
-{
-	ROS_INFO("TIMER START");
-
-	if(FlagTimer1 ==true){
-		FlagTimer1=false;
-		FlagFinish1 = true;
-	}else{
-		FlagTimer1=true;
-	}
-}
-
-ROBO_CONDITION Robot::ScanMode(void)
-{	
-	ROS_INFO(" EXTRA_STAGE");
-	
-	static double ex_theta =0;
-	static double diff_theta =0;
-	diff_theta += theta-ex_theta;
-	ros::Timer timer1 = node.createTimer(ros::Duration(1), &Robot::timerCallback1,this,false);
-	static double speed = 0.4;
-	static double ex_distance = distance;
-
-/*
-		if(FlagFinish1 == true){
-			FlagTimer1=false;
-			FlagFinish1=false;
-		}
-
-	if(FlagTimer1==true){
-		Move(0,0,0);
-		diff_theta=0;
-	}else{
-*/
-		if(distance-ex_distance > 700 ){
-			if(theta > 30*M_PI/180){
-				ROS_INFO("Turn Right");
-				speed = -0.4;
-				//Move(0,0,-0.4);
-			}else if(theta < -30*M_PI/180){
-				ROS_INFO("Turn Left");
-				speed = 0.4;
-				//Move(0,0,0.4);
-			}else if((diff_theta>(10*M_PI/180) || diff_theta<(-10*M_PI/180))){
-				ROS_INFO("STOP KOBUKI");
-				ROS_INFO("TIME START");
-				for( unsigned int i =0;i<600000;i++){
-					Move(0,0,0);
-				}
-				diff_theta=0;
-			}
-			Move(0,0,speed);
-		}else{
-			Move(0.3,0,0);
-		}
-	//}
-#ifdef DEBUG
-	std::cout << "DIFF DISTANCE " << distance - ex_distance << std::endl;
-	//std::cout << "FLAG_TIMESTART=" << FlagTimer1 << std::endl;
-	std::cout << "SPEED= " << speed << std::endl;
-	std::cout << "DIFF THETA" << diff_theta << std::endl;
-#endif
-	//\state = STAGE_EXTRA2;
-	ex_theta = theta;
-	return SAFE;
-}
-///////////////////////////////////////////////////////////////////
-////
-////	E X T R A  " A I M  T O  T A R G E T"
-////	1st 	check get object position data
-////	2nd		if get object positon, aim to object
-////
-///////////////////////////////////////////////////////////////////
-double PositionX=0.0;
-
-bool FlagTimer2=false;
-
-void Robot::timerCallback2(const ros::TimerEvent& event)
-{
-	if(FlagTimer2==false){
-		FlagTimer2=true;
-	}else{
-		FlagTimer2=false;
-	}
-}
-
-
-ROBO_CONDITION Robot::AimToObjectConcentraitPub(void)
-{
-	state = STAGE_EXTRA;
-	return SAFE;
-}
-/*
-void Robot::CatchPointCallback(geometry_msgs::PoseArray pa){
-	static int i= 0;
-	TargetObject=pa.poses[i];
-
-
-}*/
-
-ROBO_CONDITION Robot::AimToObjectConcentraitCli(void)
-{
-	robocup_perception::ObjectPoints srv;
-	srv.request.flag = true;
-	static int i =0;
-	ros::Timer timer = node.createTimer(ros::Duration(2000), &Robot::timerCallback2,this);
-	if(FlagTimer2==true){
-		Move(0,0,0);
-		return SAFE;
-	}
-
-	static int once =0;
-
-	if(once==0){
-		if(ObjectCoodi_client.call(srv)){
-			ROS_INFO("GET CATCH OBJECT");
-
-			TargetObject = srv.response.object_pose.poses[i];
-			once =1;
-		}else{
-			ROS_INFO("NOT GET CATCH OBJECT");
-		}
-	}
-
-	if(TargetObject.position.y*1000-pose.y>100){
-		timer.stop();
-		Move(0,0,0.5);
-		FlagTimer2=false;
-	}else if(TargetObject.position.y*1000-pose.y < -100){
-		timer.stop();
-		Move(0,0,-0.5);
-		FlagTimer2=false;
-	}else{
-		timer.stop();
-		Move(0,0,0);
-		timer.start();
-		FlagTimer2=true;
-		i++;
-	}
-	state = STAGE_EXTRA;
-	ROS_INFO("STAGE_EXTRA2 FINISHED");
-}
 
 ///////////////////////////////////////////////////////////////////
 int main (int argc, char **argv)
@@ -698,62 +540,65 @@ int main (int argc, char **argv)
 	Robot robot;
 	
 	robot.init();
+	
 
 	ros::Rate loop_rate(40);   
 		
 	int loop;
 
 	PHASE_STATE STAGE_NUMBER=STAGE_BEGIN;				//		PHASE NUMBER
-	robot.setState( STAGE_EXTRA );
-
-	//robot.HeadUp()
+	robot.setState( STAGE_BEGIN );
 
 	ROBO_CONDITION result;				
-	std::cout << "GetSTATE = " << robot.getState() << std::endl;
+	
+	robot.HeadUp();
 
 	while(ros::ok()){
+		if(CallMini){
+			ROS_INFO(" Called Mini");
+		
 
-		switch( robot.getState() ){
-			std::cout<<robot.getState()<<std::endl;
-	    	case STAGE_BEGIN:	result=robot.GetDataObject();					break;
-	    	case STAGE1:		result=robot.AimToObject();						break;	
-	    	case STAGE2:		result=robot.OptimizeHand();					break;
-	    	case STAGE3:		result=robot.MoveToObject();					break;
-	    	case STAGE_EXTRA:	result=robot.ScanMode();						break;
-	    	case STAGE_EXTRA2:	result=robot.AimToObjectConcentraitCli();		break;
+			switch( robot.getState() ){
+				std::cout<<robot.getState()<<std::endl;
+		    	case STAGE_BEGIN:	result=robot.GetDataObject();		break;
+		    	case STAGE1:		result=robot.AimToObject();			break;	
+		    	case STAGE2:		result=robot.OptimizeHand();		break;
+		    	case STAGE3:		result=robot.MoveToObject();		break;
+		    	
+		    	case STAGE_END:		ROS_INFO("STATE_END");			break;
+		    }
 
-	    	case STAGE_END:		ROS_INFO("STATE_END");			break;
-	    }
+		    // LOOP num is upper 10 -> sleep
+		    if(loop==10){
+		    	loop_rate.sleep();
+	    		ros::spinOnce();
+	    		loop=0;
+	    		continue;
+		    }
 
-	    // LOOP num is upper 10 -> sleep
-	    if(loop==10){
-	    	loop_rate.sleep();
-			ros::spinOnce();
-			loop=0;
-			continue;
-	    }
+		    if(result==DANGER){
+		    	loop++;
+		    	ROS_INFO("PHASE_No.%d is DANGER\n",robot.getState());
 
-	    if(result==DANGER){
-	    	loop++;
-	    	ROS_INFO("PHASE_No.%d is DANGER\n",robot.getState());
-
+		    }else{
+		    	//if(robot.getState() == STAGE_BEGIN){
+				for(int i=0; i<ObjectsNum && i < 10 ; i++){
+					object[i].SpeakPosition();
+		    	}
+		    	//}
+			  
+			    //debug STAGE_LIMITER
+			    if( robot.getState() == TEST_MAX){
+		    		STAGE_NUMBER = STAGE_END;
+		    	}
+		    }
 	    }else{
-	    	//if(robot.getState() == STAGE_BEGIN){
-			for(int i=0; i<ObjectsNum && i < 10 ; i++){
-				object[i].SpeakPosition();
-	    	}
-	    	//}
-		  
-		    //debug STAGE_LIMITER
-		    
-		    /*if( robot.getState() == TEST_MAX){
-	    		STAGE_NUMBER = STAGE_END;
-	    	}*/
+	    	ROS_INFO(" Please say Mini");
 	    }
 	    loop_rate.sleep();
 		ros::spinOnce();
 	}
-
+	
     ROS_INFO("FINISHED");
 
 	return 0;
